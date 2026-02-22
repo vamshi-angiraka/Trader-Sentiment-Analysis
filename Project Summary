@@ -1,0 +1,67 @@
+📊 Trader Sentiment Analysis
+
+This project analyzes trader behavior by combining historical trading data with market sentiment indicators such as the Fear & Greed Index.
+
+The objective is to understand how leverage usage, trade frequency, and performance consistency vary across different market sentiment regimes.
+
+
+🧠 Methodology
+
+The dataset was cleaned, standardized, and preprocessed to ensure analytical consistency.
+
+A new feature called leverage was derived using:
+
+df['leverage'] = df['size_usd'] / df['collateral_usd']
+
+Leverage Formula:
+
+Leverage = Size (USD) / Collateral (USD)
+
+Traders were segmented into:
+
+1. High vs Low Leverage traders
+
+2. Frequent vs Infrequent traders
+
+3. Consistent vs Inconsistent performers
+
+Exploratory Data Analysis (EDA) was conducted using aggregated statistics and visualization techniques to compare:
+
+1. Average PnL
+
+2. Trade frequency
+
+3. Leverage distribution
+
+Sentiment regime impact
+
+📊 Key Insights
+
+* High Leverage traders exhibit higher return volatility, especially during Fear periods.
+
+* Frequent traders perform better during Greed/stable markets, but overtrading during Fear regimes reduces consistency.
+
+* Consistent winners maintain moderate leverage and controlled trade frequency, indicating strong risk discipline.
+
+* Market sentiment significantly influences behavior — leverage usage increases during Greed phases and becomes unstable during Fear phases.
+
+🚀 Strategy Recommendations
+
+1. Dynamic Leverage Control Rule
+
+2. During Fear periods, reduce leverage exposure for high-leverage traders.
+
+3. Maintain leverage below 5x to minimize drawdown risk and prevent liquidation cascades.
+
+
+Adaptive Trade Frequency Rule:
+
+1. Increase trade activity during stable/Greed conditions.
+
+2. Reduce frequency during high-volatility Fear regimes.
+
+3. Focus on disciplined execution rather than overtrading.
+
+🎯 Conclusion :
+
+Behavioral segmentation combined with sentiment analysis provides actionable trading insights. Risk-adjusted leverage management and adaptive trade frequency significantly improve performance stability.
